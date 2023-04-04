@@ -39,7 +39,7 @@
                 const clone = svg.cloneNode(true);
                 const animateTransforms = clone.querySelectorAll('g animateTransform');
                 animateTransforms.forEach(function(animateTransform) {
-                    animateTransform.setAttribute('begin', i + animateTransform.getAttribute('begin'));
+                    animateTransform.setAttribute('begin', -(i + animateTransform.getAttribute('begin')));
                 });
                 document.body.appendChild(clone);
             }
